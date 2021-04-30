@@ -1,0 +1,82 @@
+.filterContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: #707070;
+  padding: 0.25rem 0;
+}
+
+.filterSelector {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: nowrap;
+
+  background-color: #707070;
+  color: #bababa;
+  overflow: hidden;
+}
+
+.subject {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  padding: 0.25rem 0;
+}
+
+.subject:hover {
+  color: white;
+}
+
+.subject label {
+  padding: 0 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.divider {
+  width: 2px;
+  height: 1.3rem;
+  background-color: white;
+}
+
+.arrowUp div {
+  width: 0;
+  margin-left: 0.5rem;
+  margin-top: 10px;
+  margin-right: 7px;
+
+  border-left: 0.65rem solid transparent;
+  border-right: 0.65rem solid transparent;
+  border-bottom: 0.65rem solid white;
+  border-top: 0;
+}
+
+.arrowDown div {
+  width: 0;
+  margin-left: 0.5rem;
+  margin-top: 10px;
+  margin-right: 7px;
+
+  border-left: 0.65rem solid transparent;
+  border-right: 0.65rem solid transparent;
+  border-top: 0.65rem solid white;
+  border-bottom: 0;
+}
+
+.arrowDown {
+  margin: 0 0 0 auto;
+  height: fit-content;
+}
+
+.arrowUp {
+  margin: 0 0 0 auto;
+  height: fit-content;
+}
+
+.arrowDown:hover {
+  cursor: pointer;
+}
+
+.arrowUp:hover {
+  cursor: pointer;
+}

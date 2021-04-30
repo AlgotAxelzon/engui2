@@ -1,0 +1,78 @@
+.header {
+  background-color: rgb(64, 107, 201);
+  display: flex;
+  justify-content: left;
+  height: 3rem;
+}
+
+.header h4 {
+  margin: auto 10px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto 0 10px;
+}
+
+.home a {
+  color: white;
+  text-decoration: none;
+}
+
+.logout {
+  margin: auto 15px auto 10px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.burgerIcon {
+  display: none;
+  margin: auto 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 2.5rem;
+  height: 0.4rem;
+  background-color: white;
+  margin: 0.3rem 0;
+}
+
+.rolldown {
+  background-color: rgb(64, 107, 201);
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.rolldown h4 {
+  margin: 0 !important;
+  height: 1rem;
+  padding: 1rem 0 1rem 10px;
+  border-top: 1px white solid;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+}
+
+@media screen and (max-width: 600px) {
+  .burgerIcon {
+    display: inline-block !important;
+  }
+
+  .header h4 {
+    display: none;
+  }
+}
