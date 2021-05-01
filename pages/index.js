@@ -1,9 +1,13 @@
+import Head from 'next/head'
 import ArticleBrowser from '../components/ArticleBrowser'
 import Header from '../components/Header'
 import { articles } from '../data.js'
 export default function Home({ articles, subjects }) {
   return (
     <>
+      <Head>
+        <title>Engineering Guidance</title>
+      </Head>
       <Header />
       <ArticleBrowser articles={articles} subjects={subjects} />
     </>
