@@ -4,25 +4,13 @@ import Markdown from './Markdown'
 import styles from '../styles/Article.module.css'
 
 const Article = ({ article }) => {
-  // const [thumbnail, setThumbnail] = useState(null)
-
-  //   useEffect(() => {
-  //     if (article.thumbnail) {
-  //       fetch(`/api/pictures/${article.thumbnail}`)
-  //         .then((res) => res.json())
-  //         .then((data) => {
-  //           setThumbnail(data.image)
-  //         })
-  //     }
-  //   }, [article])
-
   if (article.public) {
     return (
       <div>
         <div className={styles.article}>
           <h1>{article.title}</h1>
           <p>Last edited: {article.lastEdited}</p>
-          {/* <img src={thumbnail} alt="Thumbnail" /> */}
+          <img src={article.thumbnail} alt="Thumbnail" />
           <Markdown>{article.text}</Markdown>
         </div>
       </div>

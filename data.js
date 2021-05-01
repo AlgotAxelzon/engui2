@@ -13,7 +13,7 @@ export const articles = [
     author: 1,
     scienceSubjectId: 'MECH',
     scienceSubjectName: 'Mechanics',
-    thumbnail: 24,
+    thumbnail: 'https://i.imgur.com/aI5x8Fu.jpeg',
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const articles = [
     author: 1,
     scienceSubjectId: 'SSF',
     scienceSubjectName: 'Solid-state Physics',
-    thumbnail: 26,
+    thumbnail: 'https://i.imgur.com/d11wsMw.jpg',
   },
   {
     id: 1,
@@ -45,6 +45,6 @@ export const articles = [
     author: 1,
     scienceSubjectId: 'QM',
     scienceSubjectName: 'Quantum Mechanics',
-    thumbnail: 23,
+    thumbnail: 'https://i.imgur.com/u3yBTLv.jpeg',
   },
 ]

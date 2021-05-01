@@ -8,20 +8,11 @@ const ArticlePreview = ({
   author,
   scienceSubjectId,
   url,
-  image,
+  thumbnail,
   published,
   currentPage,
   filter,
 }) => {
-  const [thumbnail, setThumbnail] = useState('')
-
-  //   useEffect(() => {
-  //     fetch(`/api/pictures/${image}`)
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         setThumbnail(data.image)
-  //       })
-  //   }, [currentPage, filter])
 
   if (published) {
     return (
@@ -29,14 +20,16 @@ const ArticlePreview = ({
         <h3 className={styles.title}>
           <Link href={`/article/${url}`}>{title}</Link>
         </h3>
-        <Link href={`/article/${url}`} className={styles.thumbnail}>
-          Thumbnail-placeholder{/* <img src={thumbnail} alt="Thumbnail" /> */}
+        <Link href={`/article/${url}`}>
+          <div className={styles.thumbnail}>
+          <img src={thumbnail} alt="Thumbnail" />
+          </div>
         </Link>
         <p className={styles.summary}>{summary}</p>
-        {/* <p>{author}</p> */}
-        {/* <p>{science_subject}</p> */}
-        <Link href={`/article/${url}`} className={styles.articleLink}>
+        <Link href={`/article/${url}`}>
+          <div className={styles.articleLink}>
           VIEW POST
+          </div>
         </Link>
       </div>
     )
