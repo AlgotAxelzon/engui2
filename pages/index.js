@@ -7,6 +7,7 @@ export default function Home({ articles, subjects }) {
     <>
       <Head>
         <title>Engineering Guidance</title>
+        <meta name="description" content="The site for the tricky physics or math problems you might encounter as an engineering student at university." />
       </Head>
       <Header />
       <ArticleBrowser articles={articles} subjects={subjects} />

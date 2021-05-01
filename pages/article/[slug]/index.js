@@ -8,6 +8,7 @@ const article = ({ article }) => {
     <>
       <Head>
         <title>{article.title}</title>
+        <meta name="description" content={article.summary} />
       </Head>
       <Header />
       <Article article={article} />
