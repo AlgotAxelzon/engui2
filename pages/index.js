@@ -1,5 +1,6 @@
 import ArticleBrowser from '../components/ArticleBrowser'
 import Header from '../components/Header'
+import { articles } from '../data.js'
 export default function Home({ articles, subjects }) {
   return (
     <>
@@ -10,16 +11,11 @@ export default function Home({ articles, subjects }) {
 }
 
 export const getStaticProps = async () => {
-  // TODO: Add server config
-  const res = await fetch(`http://localhost:3000/api/articles`)
-  const articles = await res.json()
 
-  const resSubjects = await fetch(`http://localhost:3000/api/subjects`)
-  const subjects = await resSubjects.json()
-
-  // const subjects = articles.map((article) => {
-  //   article.scienceSubjectId, article.scienceSubjectName
-  // })
+  const subjects = articles.map((article) => ({
+    id: article.scienceSubjectId,
+    name: article.scienceSubjectName,
+  }))
 
   return {
     props: {
