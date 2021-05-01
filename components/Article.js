@@ -1,5 +1,4 @@
 import React from 'react'
-import { useEffect, useState, useContext } from 'react'
 import 'katex/dist/katex.min.css'
 import Markdown from './Markdown'
 import styles from '../styles/Article.module.css'
@@ -20,7 +19,6 @@ const Article = ({ article }) => {
   if (article.public) {
     return (
       <div>
-        {/* <Route exact path={`${path}`}> */}
         <div className={styles.article}>
           <h1>{article.title}</h1>
           <p>Last edited: {article.lastEdited}</p>
