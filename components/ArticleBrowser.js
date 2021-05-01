@@ -60,7 +60,7 @@ const ArticleBrowser = ({ articles, subjects }) => {
               science_subject={article.scienceSubject}
               url={article.url}
               key={idx}
-              image={article.thumbnail}
+              thumbnail={article.thumbnail}
               published={article.public}
               currentPage={currentPage}
               filter={filter}
