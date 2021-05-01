@@ -9,6 +9,11 @@ const article = ({ article }) => {
       <Head>
         <title>{article.title}</title>
         <meta name="description" content={article.summary} />
+
+        <meta property="og:url" content={`https://www.engui.xyz/article/${article.url}`} />
+        <meta property="og:title" content={article.title} />
+        <meta property="og:description" content={article.summary} />
+        <meta property="og:image" content={article.thumbnail} />
       </Head>
       <Header />
       <Article article={article} />
