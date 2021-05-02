@@ -83,7 +83,7 @@ const ArticleBrowser = ({ articles, subjects }) => {
           <ul>
             {articles.slice(0, 5).map((article, idx) => (
               <li key={idx}>
-                <Link href={`/article/${article.url}`}>{article.title}</Link>
+                <Link href={`/${article.url}`}>{article.title}</Link>
               </li>
             ))}
           </ul>

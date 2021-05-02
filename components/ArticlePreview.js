@@ -18,15 +18,15 @@ const ArticlePreview = ({
     return (
       <div className={styles.previewBox}>
         <h2 className={styles.title}>
-          <Link href={`/article/${url}`}>{title}</Link>
+          <Link href={`/${url}`}>{title}</Link>
         </h2>
-        <Link href={`/article/${url}`}>
+        <Link href={`/${url}`}>
           <div className={styles.thumbnail}>
           <img src={thumbnail} alt="Thumbnail" />
           </div>
         </Link>
         <p className={styles.summary}>{summary}</p>
-        <Link href={`/article/${url}`}>
+        <Link href={`/${url}`}>
           <div className={styles.articleLink}>
           VIEW POST
           </div>
