@@ -8,9 +8,9 @@ export default function Home({ articles, subjects }) {
       <Head>
         <title>Engineering Guidance</title>
         <meta name="description" content="The site for the tricky physics or math problems you might encounter as an engineering student at university." />
-        <link rel="canonical" href="https://www.engui.xyz/" />
+        <link rel="canonical" href="https://www.engineeringguidance.com/" />
 
-        <meta property="og:url" content={`https://www.engui.xyz`} />
+        <meta property="og:url" content="https://www.engineeringguidance.com" />
         <meta property="og:title" content="Engineering Guidance" />
         <meta property="og:description" content="The site for the tricky physics or math problems you might encounter as an engineering student at university." />
         <meta property="og:image" content="/favicon.ico" />
@@ -24,7 +24,7 @@ export default function Home({ articles, subjects }) {
               gtag('js', new Date());
               gtag('config', 'G-MT5NWW6HW9', {
                 'linker': {
-                  'domains': ['engui.xyz', 'engineeringguidance.com']
+                  'domains': ['engineeringguidance.com', 'engui.xyz']
                 }
               );
             `
