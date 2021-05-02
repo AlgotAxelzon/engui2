@@ -17,9 +17,9 @@ const ArticlePreview = ({
   if (published) {
     return (
       <div className={styles.previewBox}>
-        <h3 className={styles.title}>
+        <h2 className={styles.title}>
           <Link href={`/article/${url}`}>{title}</Link>
-        </h3>
+        </h2>
         <Link href={`/article/${url}`}>
           <div className={styles.thumbnail}>
           <img src={thumbnail} alt="Thumbnail" />
