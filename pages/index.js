@@ -14,6 +14,22 @@ export default function Home({ articles, subjects }) {
         <meta property="og:title" content="Engineering Guidance" />
         <meta property="og:description" content="The site for the tricky physics or math problems you might encounter as an engineering student at university." />
         <meta property="og:image" content="/favicon.ico" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MT5NWW6HW9"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-MT5NWW6HW9', {
+                'linker': {
+                  'domains': ['engui.xyz', 'engineeringguidance.com']
+                }
+              );
+            `
+          }}
+        />
       </Head>
       <Header />
       <ArticleBrowser articles={articles} subjects={subjects} />
