@@ -8,6 +8,7 @@ export default function Home({ articles, subjects }) {
       <Head>
         <title>Engineering Guidance</title>
         <meta name="description" content="The site for the tricky physics or math problems you might encounter as an engineering student at university." />
+        <link rel="canonical" href="https://www.engui.xyz/" />
 
         <meta property="og:url" content={`https://www.engui.xyz`} />
         <meta property="og:title" content="Engineering Guidance" />
