@@ -10,10 +10,16 @@ export default function Home({ articles, subjects }) {
         <meta name="description" content="The site for the tricky physics or math problems you might encounter as an engineering student at university." />
         <link rel="canonical" href="https://www.engineeringguidance.com/" />
 
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.engineeringguidance.com" />
         <meta property="og:title" content="Engineering Guidance" />
         <meta property="og:description" content="The site for the tricky physics or math problems you might encounter as an engineering student at university." />
         <meta property="og:image" content="/favicon.ico" />
+
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:title" content="Engineering Guidance" />
+        <meta property="twitter:description" content="The site for the tricky physics or math problems you might encounter as an engineering student at university." />
+        <meta property="twitter:image" content="/favicon.ico" />
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-MT5NWW6HW9"></script>
         <script

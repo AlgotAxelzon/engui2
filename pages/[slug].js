@@ -11,10 +11,16 @@ const article = ({ article }) => {
         <meta name="description" content={article.summary} />
         <link rel="canonical" href={`https://www.engineeringguidance.com/${article.url}`} />
 
+        <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://www.engineeringguidance.com/${article.url}`} />
         <meta property="og:title" content={article.title} />
         <meta property="og:description" content={article.summary} />
         <meta property="og:image" content={article.thumbnail} />
+
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:title" content={article.title} />
+        <meta property="twitter:description" content={article.summary} />
+        <meta property="twitter:image" content={article.thumbnail} />
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-MT5NWW6HW9"></script>
         <script
