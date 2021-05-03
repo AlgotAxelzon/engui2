@@ -10,14 +10,14 @@ class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MT5NWW6HW9"></script>
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNMFGB1MRC"></script>
                     <script
                         dangerouslySetInnerHTML={{
                             __html: `
                                 window.dataLayer = window.dataLayer || [];
                                 function gtag(){dataLayer.push(arguments);}
                                 gtag('js', new Date());
-                                gtag('config', 'G-MT5NWW6HW9', {
+                                gtag('config', 'G-CNMFGB1MRC', {
                                     'linker': {
                                     'domains': ['engineeringguidance.com', 'engui.xyz']
                                     }
