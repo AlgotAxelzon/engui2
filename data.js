@@ -1,5 +1,19 @@
 export const articles = [
   {
+    id: 5,
+    authorName: "Linnéus Karlsson",
+    title: "Laplace Transform of DC Circuits",
+    summary: "When studying transient processes, like when a switch is changed, in electrical circuits we have to make us of the Laplace transform. Here is a quick rundown on how to Laplace transform the resistor, capacitor and inductor.",
+    "text": "**When studying transient processes, like when a switch is changed, in electrical circuits we have to make us of the Laplace transform. Here is a quick rundown on how to Laplace transform the resistor, capacitor and inductor.**\n\nFirst we need to establish what happens when we Laplace transform the current and voltage. We can see the voltage and current as \"unknown\" functions dependent on time, therefore their Laplace transforms become:\n\n$$\n        \\begin{aligned}\n            & i(t) \\Rightarrow I(s) \\\\\n            & u(t) \\Rightarrow U(s)\n        \\end{aligned}\n        .\n$$\n\nSo lets start with the easy component: the resistor. We know from Ohm's law that:\n\n$$\n    u(t) = R i(t).\n$$\n\nIf we Laplace transform this we get:\n\n$$\n    U(s) = R I(s),\n$$\n\nsince the resistor is time independent. The inductor and capacitor is time dependent, so they get a little bit more trickier. First we need to see what happens when we apply the Laplace transform to a derivative of a function $f(t)$. The Laplace transform of an arbitrary function $f(t)$ is given by:\n\n$$\n    F(s) = \\int_{0-}^\\infty e^{-st} f(t) dt.\n$$\n\nThe $0-$ can be looked at more or less as what happened exactly before significant change happened to the function $f(t)$ (we'll get back to this). So lets preform the Laplace transform on $f'(t)$:\n\n$$\n    \\int_{0-}^\\infty e^{-st} f'(t) dt.\n$$\n\nWith a little partial integration we get:\n\n$$\n    \\bigg[e^{-st} f(t) \\bigg]_{0-}^\\infty - \\int_{0-}^\\infty -se^{-st} f(t) dt = - f(0-) + sF(s) .\n$$\n\nWith that out of the way lets preform the Laplace transform on the inductor first. We know that the potential over an inductor is given by:\n\n$$\n    u(t) = L \\frac{d i(t)}{dt}.\n$$\n\nSo with our knowledge of Laplace transforming a derivative we get the following:\n\n$$\n    U(s) = L (s I(s) - i(0-)).\n$$\n\nThe inductor is said to be energized if there is an initial current $i(0-)$. If there is no initial current we get a simpler relation of:\n\n$$\n    U(s) = sL I(s).\n$$\n\nWe can also rewrite the relation to get the current:\n\n$$\n    I(s) = \\frac{U(s)}{sL} + \\frac{i(0-)}{s}.\n$$\n\nWe can make circuit diagrams with these relations:\n\n![Image of Laplace transform of the inductor](https://i.imgur.com/IkgvQUe.png \"Laplace transform of the inductor\")\n\nNote the Thevenin/Norton equivalents under \"Initial current\".\n\nLets move on to the capacitor. The procedure of Laplace transforming the capacitor is the same as the inductor. The current through a capacitor is given by:\n\n$$\n    i(t) = C \\frac{du(t)}{dt}.\n$$\n\nSo the Laplace transform of the current is:\n\n$$\n    I(s) = C(sU(s) - u(0-)).\n$$\n\nWe can see here that if there is no initial voltage over the capacitor we get the simpler relation:\n\n$$\n    I(s) = sC U(s).\n$$\n\nLastly the the Laplace transformed voltage is:\n\n$$\n    U(s) = \\frac{I(s)}{sC} + \\frac{u(0-)}{s}.\n$$\n\nThe circuit diagrams then become:\n\n![Image of Laplace transform of the capacitor](https://i.imgur.com/za9EeTS.png \"Laplace transform of the capacitor\")\n\nAnd that is it! You now know how to Laplace transform the resistor, inductor and capacitor!",
+    lastEdited: "2021-05-06 19:51:46",
+    public: true,
+    url: "laplace-transform-of-dc-circuits",
+    author: 1,
+    scienceSubject: "EC",
+    scienceSubjectName: 'Electrical Circuits',
+    thumbnail: "https://i.imgur.com/ugFW7vS.png"
+  },
+  {
     id: 4,
     authorName: "Linnéus Karlsson",
     title: "Couette Flow - Laminar Flow Past Two Plates",
