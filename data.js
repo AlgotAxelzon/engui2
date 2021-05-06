@@ -9,7 +9,7 @@ export const articles = [
     public: true,
     url: "laplace-transform-of-dc-circuits",
     author: 1,
-    scienceSubject: "EC",
+    scienceSubjectId: "EC",
     scienceSubjectName: 'Electrical Circuits',
     thumbnail: "https://i.imgur.com/ugFW7vS.png"
   },
