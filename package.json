@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap --config ensitemap.js",
     "start": "next start"
   },
   "dependencies": {
     "@types/react": "^17.0.4",
     "katex": "^0.13.3",
     "next": "10.2.0",
+    "next-sitemap": "^1.6.49",
     "react": "^17.0.2",
     "react-dom": "17.0.2",
     "react-markdown": "^6.0.1",
