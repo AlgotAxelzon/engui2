@@ -4,6 +4,24 @@ import Header from '../components/Header'
 import { articles } from '../data.js'
 
 const article = ({ article }) => {
+
+  const schemaData =
+  {
+    "@context": "https://schema.org/",
+    "@type": "Article",
+    "headline": article.title,
+    "articleBody": article.text,
+    "articleSection": article.scienceSubjectName,
+    "thumbnailUrl": article.thumbnail,
+    "about": {
+      "@type": "Thing",
+      "description": article.summary,
+      "url": "https://www.engineeringguidance.com/" + article.url,
+    },
+    "image": article.thumbnail,
+    "dateModified": article.lastEdited,
+  }
+
   return (
     <>
       <Head>
@@ -22,21 +40,10 @@ const article = ({ article }) => {
         <meta property="twitter:description" content={article.summary} />
         <meta property="twitter:image" content={article.thumbnail} />
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MT5NWW6HW9"></script>
         <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-MT5NWW6HW9', {
-                'linker': {
-                  'domains': ['engineeringguidance.com', 'engui.xyz']
-                }
-              );
-            `
-          }}
-          />
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
       </Head>
       <Header />
       <Article article={article} />
@@ -55,11 +62,11 @@ export const getStaticProps = async (context) => {
       props: {
         article,
       },
-    } 
+    }
   } else {
     return {
       props: {},
-    } 
+    }
   }
 }
 
