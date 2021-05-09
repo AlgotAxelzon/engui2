@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.engineeringguidance.com
+
+# Sitemaps
+Sitemap: https://www.engineeringguidance.com/sitemap.xml
