@@ -18,21 +18,17 @@ const ArticlePreview = ({
     return (
       <div className={styles.previewBox}>
         <h2 className={styles.title}>
-          <Link href={`/${url}`}>
-            <a title={title}>
-              {title}
-            </a>
-          </Link>
+          <Link href={`/${url}`}>{title}</Link>
         </h2>
         <Link href={`/${url}`}>
           <div className={styles.thumbnail}>
-            <img src={thumbnail} alt="Thumbnail" />
+          <img src={thumbnail} alt="Thumbnail" />
           </div>
         </Link>
         <p className={styles.summary}>{summary}</p>
         <Link href={`/${url}`}>
           <div className={styles.articleLink}>
-            VIEW POST
+          VIEW POST
           </div>
         </Link>
       </div>

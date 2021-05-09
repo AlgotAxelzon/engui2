@@ -26,11 +26,7 @@ const Header = () => {
     <div>
       <nav className={styles.header}>
         <h1 className={styles.home}>
-          <Link href="/">
-            <a title="Enginnering Guidance">
-              ENGUI.
-            </a>
-          </Link>
+          <Link href="/">ENGUI.</Link>
         </h1>
         <h4>Contact</h4>
         <h4>Privacy Policy</h4>
