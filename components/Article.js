@@ -10,7 +10,7 @@ const Article = ({ article }) => {
         <div className={styles.article}>
           <h1>{article.title}</h1>
           <p>Last edited: {article.lastEdited}</p>
-          <img src={article.thumbnail} alt="Thumbnail" />
+          <img src={article.thumbnail} alt="Thumbnail" title={article.title} />
           <Markdown>{article.text}</Markdown>
         </div>
       </div>

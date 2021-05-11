@@ -24,13 +24,13 @@ const ArticlePreview = ({
             </a>
           </Link>
         </h2>
-        <Link href={`/${url}`}>
+        <Link title={title} href={`/${url}`} passHref>
           <div className={styles.thumbnail}>
-            <img src={thumbnail} alt="Thumbnail" />
+            <img src={thumbnail} alt="Thumbnail" title={title} />
           </div>
         </Link>
         <p className={styles.summary}>{summary}</p>
-        <Link href={`/${url}`}>
+        <Link title={title} href={`/${url}`}>
           <div className={styles.articleLink}>
             VIEW POST
           </div>

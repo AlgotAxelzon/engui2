@@ -27,7 +27,7 @@ const Header = () => {
       <nav className={styles.header}>
         <h1 className={styles.home}>
           <Link href="/">
-            <a title="Enginnering Guidance">
+            <a title="Engineering Guidance">
               ENGUI.
             </a>
           </Link>
