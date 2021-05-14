@@ -31,10 +31,17 @@ export default function Home({ articles, subjects }) {
 
 export const getStaticProps = async () => {
 
-  const subjects = articles.map((article) => ({
+  let subjects = articles.map((article, index) => ({
     id: article.scienceSubjectId,
     name: article.scienceSubjectName,
   }))
+
+  subjects = subjects.filter((subject, index, self) =>
+    index === self.findIndex((s) => (
+      s.id === subject.id && s.name === subject.name
+    ))
+  )
+  // console.log(subjects)
 
   return {
     props: {
