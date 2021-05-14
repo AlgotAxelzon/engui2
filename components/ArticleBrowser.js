@@ -70,9 +70,10 @@ const ArticleBrowser = ({ articles, subjects }) => {
             <Pagination
               articlesPerPage={articlesPerPage}
               totalPosts={
-                loggedIn
-                  ? filtered.length
-                  : filtered.filter((article) => article.public).length
+                // loggedIn
+                //   ? filtered.length
+                //   : 
+                filtered.filter((article) => article.public).length
               }
               paginate={paginate}
             />

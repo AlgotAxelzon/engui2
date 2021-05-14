@@ -13,7 +13,7 @@ const Pagination = ({ articlesPerPage, totalPosts, paginate }) => {
       {pageNumbers.map((number) => (
         <li key={number}>
           <button
-            className={styles.button}
+            className={styles.pagknapp}
             type="button"
             onClick={() => paginate(number)}
           >
