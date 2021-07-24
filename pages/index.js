@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import ArticleBrowser from '../components/ArticleBrowser'
 import Header from '../components/Header'
+import CookieAccept from '../components/CookieAccept'
 import { articles } from '../data.js'
+
 export default function Home({ articles, subjects }) {
   return (
     <>
@@ -25,6 +27,7 @@ export default function Home({ articles, subjects }) {
       </Head>
       <Header />
       <ArticleBrowser articles={articles} subjects={subjects} />
+      <CookieAccept></CookieAccept>
     </>
   )
 }
