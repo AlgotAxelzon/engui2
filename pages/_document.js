@@ -25,7 +25,7 @@ class MyDocument extends Document {
                         `,
                         }}
                     />
-                    <script data-ad-client="ca-pub-7796283578510574" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <meta name="propeller" content="510b0baedc5377871bd16b917d9ce48f" />
                 </Head>
                 <body>
                     <Main />
