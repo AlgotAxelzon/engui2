@@ -32,8 +32,20 @@ const Header = () => {
             </a>
           </Link>
         </h1>
-        <h4>Contact</h4>
-        <h4>Privacy Policy</h4>
+        <h4>
+          <Link href="/contact">
+            <a title="Contact">
+              Contact
+            </a>
+          </Link>
+        </h4>
+        <h4>
+          <Link href="/privacy-policy">
+            <a title="Privacy Policy">
+              Privacy Policy
+            </a>
+          </Link>
+        </h4>
         <div className={styles.burgerIcon} onClick={openBurger}>
           <div className={styles.bar1}></div>
           <div className={styles.bar2}></div>
@@ -42,8 +54,20 @@ const Header = () => {
       </nav>
       {isTabletOrMobile && (
         <nav style={rolldown} className={styles.rolldown}>
-          <h4>Contact</h4>
-          <h4>Privacy Policy</h4>
+          <h4>
+            <Link href="/contact">
+              <a title="Contact">
+                Contact
+              </a>
+            </Link>
+          </h4>
+          <h4>
+            <Link href="/privacy-policy">
+              <a title="Privacy Policy">
+                Privacy Policy
+              </a>
+            </Link>
+          </h4>
         </nav>
       )}
     </div>

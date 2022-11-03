@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Article from '../components/Article'
 import Header from '../components/Header'
 import { articles } from '../data.js'
+import CookieAccept from '../components/CookieAccept'
 
 const article = ({ article }) => {
 
@@ -47,6 +48,7 @@ const article = ({ article }) => {
       </Head>
       <Header />
       <Article article={article} />
+      <CookieAccept />
     </>
   )
 }
