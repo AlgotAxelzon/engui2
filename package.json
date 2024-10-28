@@ -27,5 +27,8 @@
     "tabWidth": 2,
     "semi": false,
     "singleQuote": true
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
