@@ -26,7 +26,7 @@ class MyDocument extends Document {
                         }}
                     />
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7796283578510574"
-                        crossorigin="anonymous"></script>
+                        crossOrigin="anonymous"></script>
                 </Head>
                 <body>
                     <Main />

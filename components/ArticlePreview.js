@@ -16,27 +16,25 @@ const ArticlePreview = ({
 
   if (published) {
     return (
-      <div className={styles.previewBox}>
+      (<div className={styles.previewBox}>
         <h2 className={styles.title}>
-          <Link href={`/${url}`}>
-            <a title={title}>
-              {title}
-            </a>
+          <Link href={`/${url}`} title={title} legacyBehavior>
+            {title}
           </Link>
         </h2>
-        <Link title={title} href={`/${url}`} passHref>
+        <Link title={title} href={`/${url}`} passHref legacyBehavior>
           <div className={styles.thumbnail}>
             <img src={thumbnail} alt="Thumbnail" title={title} />
           </div>
         </Link>
         <p className={styles.summary}>{summary}</p>
-        <Link title={title} href={`/${url}`}>
+        <Link title={title} href={`/${url}`} legacyBehavior>
           <div className={styles.articleLink}>
             VIEW POST
           </div>
         </Link>
-      </div>
-    )
+      </div>)
+    );
   } else {
     return ''
   }

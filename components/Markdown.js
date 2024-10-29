@@ -8,7 +8,7 @@ import 'katex/dist/katex.min.css'
 const _mapProps = (props) => ({
   ...props,
   skipHtml: false,
-  plugins: [RemarkMathPlugin],
+  remarkPlugins: [RemarkMathPlugin],
   rehypePlugins: [RehypeKatex, RehypeRaw],
 })
 
