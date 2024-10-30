@@ -10,22 +10,26 @@
   },
   "dependencies": {
     "@types/react": "^17.0.4",
-    "katex": "^0.13.3",
-    "next": "10.2.0",
+    "katex": "^0.16.11",
+    "next": "^15.0.1",
     "next-sitemap": "^1.6.57",
-    "react": "^17.0.2",
+    "react": "^18.3.1",
     "react-cookie-consent": "^6.4.1",
-    "react-dom": "17.0.2",
-    "react-markdown": "^6.0.1",
+    "react-dom": "18.3.1",
+    "react-markdown": "^8.0.6",
     "react-responsive": "^8.2.0",
-    "rehype-katex": "^5.0.0",
-    "rehype-raw": "^5.1.0",
-    "remark-math": "^4.0.0"
+    "rehype-katex": "^7.0.1",
+    "rehype-raw": "^7.0.0",
+    "remark": "^15.0.1",
+    "remark-math": "^5.1.1"
   },
   "prettier": {
     "trailingComma": "es5",
     "tabWidth": 2,
     "semi": false,
     "singleQuote": true
+  },
+  "engines": {
+    "node": "20.x"
   }
 }

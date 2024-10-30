@@ -47,7 +47,7 @@ const ArticleBrowser = ({ articles, subjects }) => {
   }
 
   return (
-    <div>
+    (<div>
       <Filter options={filterOptions} onChange={updateFilter} />
       <div className={styles.columns}>
         <div className={styles.postColumn}>
@@ -84,18 +84,16 @@ const ArticleBrowser = ({ articles, subjects }) => {
           <ul>
             {articles.slice(0, 5).map((article, idx) => (
               <li key={idx}>
-                <Link href={`/${article.url}`}>
-                  <a title={article.title}>
-                    {article.title}
-                  </a>
+                <Link href={`/${article.url}`} title={article.title} legacyBehavior>
+                  {article.title}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
       </div>
-    </div>
-  )
+    </div>)
+  );
 }
 
 export default ArticleBrowser
