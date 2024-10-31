@@ -1,6 +1,6 @@
 export const articles = [
   {
-    id: 20,
+    id: 21,
     authorName: "Algot Axelzon",
     title: "The ARMA 3 military industry",
     summary: "The ARMA process, short for autoregressive moving average, is a complex military process that is an important building block in forecasting enemy tactics. Let us look at its definition and some of its properties such as causality and invertibility but also how to choose which order your ARMA model should have in order to win a war.",
@@ -12,6 +12,20 @@ export const articles = [
     scienceSubjectId: 'WAR',
     scienceSubjectName: 'War',
     thumbnail: "https://i.imgur.com/g8V2nD7.png"
+  },
+  {
+    id: 20,
+    authorName: "Linnéus Karlsson",
+    title: "Spherical Symmetric Charge Distribution of Nucleis",
+    summary: "A charge density is considered spherically symmetric when its value depends only on the distance from a specific point space and not the direction. Consequently, angles do not matter, so it looks the same if the system is rotated. In this post, we will walk through a method of determining $^{40}$Ca's nucleus charge density.",
+    text: "**A charge density is considered spherically symmetric when its value depends only on the distance from a specific point space and not the direction. Consequently, angles do not matter, so it looks the same if the system is rotated. In this post, we will walk through a method of determining $^{40}$Ca's nucleus charge density.**\n\n## Charge Density of $^{40}$Ca\n\nAs an example, let us determine the spherically symmetric charge density\n\n$$\n    \\rho_\\text{ch}(r;\\mathbf{X}) = \\frac{\\rho^0_{\\text{ch}}}{1+e^{(r-b)/a}}\n$$\n\nfor $^{40}$Ca. Therefore, the constants $\\mathbf{X} = [\\rho^0_{\\text{ch}},a,b]$ needs to be determined. \n\n## Doubly Magic Nuclei\n\n$^{40}$Ca has a double magic number, meaning the atomic nucleus is more stable than other isotopes. Magic atomic nuclei have very small electric quadrupole moments, making them more or less spherical, which is their most tightly bound state.\n\n## Measuring $^{40}$Ca's Charge Density\n\nThis is done by elastically irradiating the target $^{40}$Ca with electrons having an energy of 250 MeV. The target is assumed to be stationary, and no recoil is assumed to occur since the target is much heavier than the electron. Since the target is assumed to be stationary in the LAB frame and no recoil is assumed for the Ca atom, the COM (center-of-momentum) frame does not move in the LAB frame. Thus, energies, scattering cross-sections, and angles are approximately the same in both frames.\n\nDifferential cross-sections $\\mathcal{E}_i$ has been measured for the electrons to be scattered at an angle $\\theta$. These cross-sections have measurement errors $\\delta_i$. At the same time, the cross-section can be theoretically expressed as\n\n$$\n    \\mathcal{T}(\\mathbf{X}) = \\left(\\frac{\\sigma}{\\Omega} \\right)_\\text{Mott} |F|^2 = \\frac{Z_p^2 Z_t^2 \\alpha^2 (\\hbar c)^2}{4 \\beta^4 E^2 \\sin^4(\\theta/2)} [1-\\beta^2 \\sin^2(\\theta/2)] \\cdot |F|^2,\n$$\n\nwhere $F$ is the form factor, $\\alpha$ is the fine structure constant, $\\beta = v/c$ with $v$ being the electron's speed, $E$ is the electron's energy, $Z_p$ and $Z_t$ are the charges of the electron and the target, respectively, and $\\theta$ is the scattering angle. In order for the measured cross-sections to agree with the theoretical values, minimization was performed on\n\n$$\n    \\mathcal{X} ^2(\\mathbf{X}) = \\sum_{i=1}^{N_\\theta} \\left(\\frac{\\mathcal{T}(\\mathbf{X})-\\mathcal{E}_i}{\\delta_i} \\right)^2.\n$$\n\nThis needs to be done with the constraint\n\n$$\n    Z_t = \\frac{4 \\pi}{e} \\int_0^\\infty r^2 \\rho_\\text{ch}(r;\\mathbf{X}) dr.\n$$\n\nThe constraint ensures that the total charge of the charge density equals the charge of the atomic nucleus $Z_t e$. Without the constraint, the form factor and charge radius would yield incorrect values. The charge density could potentially also become negative, which is not possible. This was done using **scipy**'s **basinhopping**, where a starting point\n\n$$\n    \\mathbf{X} = [0.06 \\text{ e fm}^{-3}, 1.07 \\cdot 40^{1/3} \\text{ fm}, 0.54 \\text{ fm}]\n$$\n\nwas used.\n\n## Measurements vs Theoretical Value\n\nThe vector $\\mathbf{X}_*$ that gives the minimum $\\mathcal{X}_* ^2$ sum is $\\mathbf{X} = [0.077 \\text{ e fm}^{-3}, 3.8 \\text{ fm}, 0.47 \\text{ fm}]$. In the figure below, the charge density can be observed. In the figure below that, a plot of the theoretical and measured cross-sections can also be seen.\n\n![Approximate charge density](https://i.imgur.com/Zr5Vqo0.png \"Approximate charge density\")\n\n![Cross-section measured vs theoretical](https://i.imgur.com/handYRg.png \"Cross-section measured vs theoretical\")\n\n## $^{40}$Ca's rms charge radius\n\nUsing the charge function, the rms charge radius can be calculated as follows:\n\n$$\n    \\sqrt{\\langle r^2 \\rangle} = \\sqrt{\\frac{4 \\pi}{Z_t e} \\int_0^\\infty r^4 \\rho_\\text{ch}(r;\\mathbf{X}_*) dr} \\approx 3.41 \\text{ fm}.\n$$\n\nThis differs from the accepted value of 3.4776(19) fm. The difference may be due to the fact that the charge density function is an approximation. The \"true\" charge distribution has a similar form, but it does not precisely follow the model used. Furthermore, there is uncertainty in the value of $\\rho^0_{\\text{ch}}$ at small $r$.",
+    lastEdited: "2024-10-31 12:12:14",
+    public: true,
+    url: "spherical-symmetric-charge-distribution-of-nucleis",
+    author: 1,
+    scienceSubjectId: 'SP',
+    scienceSubjectName: 'Subatomic Physics',
+    thumbnail: "https://i.imgur.com/Rq5azTQ.png"
   },
   {
     id: 19,
