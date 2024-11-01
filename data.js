@@ -26,7 +26,7 @@ export const articles = [
     scienceSubjectId: 'SP',
     scienceSubjectName: 'Subatomic Physics',
     thumbnail: "https://i.imgur.com/Rq5azTQ.png"
-} ,
+  },
   {
     id: 19,
     authorName: "Linnéus Karlsson",
