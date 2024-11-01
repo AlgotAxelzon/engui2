@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import styles from '../styles/Article.module.css'
 import CookieAccept from '../components/CookieAccept'
 import Link from 'next/link'
-import { discord_link } from '../discord_link.js'
+import { discord_link } from '../data.js'
 
 const contact = () => {
     return (

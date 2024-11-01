@@ -300,3 +300,4 @@ export const articles = [
     thumbnail: 'https://i.imgur.com/u3yBTLv.jpeg',
   },
 ]
+export const discord_link = "https://discord.gg/fqBrGAmavE"

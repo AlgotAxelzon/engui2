@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Link from 'next/link'
 import styles from '../styles/Header.module.css'
-import { discord_link } from '../discord_link.js'
+import { discord_link } from '../data.js'
 
 const Header = () => {
   const [burgerOpen, setBurgerOpen] = useState(false)
