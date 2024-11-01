@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Link from 'next/link'
 import styles from '../styles/Header.module.css'
+import { discord_link } from '../data.js'
 
 const Header = () => {
   const [burgerOpen, setBurgerOpen] = useState(false)
@@ -31,6 +32,11 @@ const Header = () => {
           </Link>
         </h1>
         <h4>
+          <Link href={discord_link} target="_blank" title="Discord">
+            Discord
+          </Link>
+        </h4>
+        <h4>
           <Link href="/contact" title="Contact">
             Contact
           </Link>
@@ -44,10 +50,16 @@ const Header = () => {
           <div className={styles.bar1}></div>
           <div className={styles.bar2}></div>
           <div className={styles.bar3}></div>
+          <div className={styles.bar4}></div>
         </div>
       </nav>
       {isTabletOrMobile && (
         <nav style={rolldown} className={styles.rolldown}>
+	  <h4>
+	    <Link href={discord_link} target="_blank" title="Discord">
+	      Discord
+	    </Link>
+	  </h4>
           <h4>
             <Link href="/contact" title="Contact">
               Contact
