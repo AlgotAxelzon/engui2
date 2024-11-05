@@ -5,14 +5,14 @@
   height: 3rem;
 }
 
-.header h4 {
+.rightstuff {
   margin: auto 10px;
   color: white;
   cursor: pointer;
   user-select: none;
 }
 
-.header h4 a {
+.rightstuff a {
   color: white;
   text-decoration: none;
 }
@@ -22,6 +22,8 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 auto 0 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .home a {
@@ -59,7 +61,7 @@
   justify-content: left;
 }
 
-.rolldown h4 {
+.rolldown div {
   margin: 0 !important;
   height: 1rem;
   padding: 1rem 0 1rem 10px;
@@ -72,7 +74,7 @@
   user-select: none;
 }
 
-.rolldown h4 a {
+.rolldown div a {
   color: white;
   text-decoration: none;
 }
@@ -82,7 +84,7 @@
     display: inline-block !important;
   }
 
-  .header h4 {
+  .rightstuff {
     display: none;
   }
 }

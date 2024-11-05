@@ -25,21 +25,21 @@ const Header = () => {
   return (
     <div>
       <nav className={styles.header}>
-        <h1 className={styles.home}>
+        <div className={styles.home}>
           <Link href="/" title="Engineering Guidance">
             ENGUI.
           </Link>
-        </h1>
-        <h4>
+        </div>
+        <div className={styles.rightstuff}>
           <Link href="/contact" title="Contact">
             Contact
           </Link>
-        </h4>
-        <h4>
+        </div>
+        <div className={styles.rightstuff}>
           <Link href="/privacy-policy" title="Privacy Policy">
             Privacy Policy
           </Link>
-        </h4>
+        </div>
         <div className={styles.burgerIcon} onClick={openBurger}>
           <div className={styles.bar1}></div>
           <div className={styles.bar2}></div>
@@ -48,16 +48,16 @@ const Header = () => {
       </nav>
       {isTabletOrMobile && (
         <nav style={rolldown} className={styles.rolldown}>
-          <h4>
+          <div className={styles.rightstuff}>
             <Link href="/contact" title="Contact">
               Contact
             </Link>
-          </h4>
-          <h4>
+          </div>
+          <div className={styles.rightstuff}>
             <Link href="/privacy-policy" title="Privacy Policy">
               Privacy Policy
             </Link>
-          </h4>
+          </div>
         </nav>
       )}
     </div>
